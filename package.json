@@ -1,14 +1,14 @@
 {
   "name": "@zachleat/issue-to-json",
   "version": "3.0.14",
-  "description": " Convert a well formed GitHub Issue Form populated Markdown body into a JSON data file in the repository.",
+  "description": "Convert a well formed GitHub Issue Form populated Markdown body into a JSON data file in the repository.",
   "type": "module",
   "main": "issue-to-json.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "keywords": [],
-  "author": "",
+  "author": "@zachleat",
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.6.0",
@@ -16,5 +16,8 @@
     "follow-url-redirects": "^1.1.0",
     "js-yaml": "^4.1.0",
     "normalize-url": "^7.0.3"
+  },
+  "devDependencies": {
+    "ava": "^4.1.0"
   }
 }
