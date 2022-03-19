@@ -28,6 +28,18 @@ test("Test both together url lib", async t => {
   t.is(normalized, "https://www.11ty.dev/");
 });
 
+test("Test normalize undefined URL", async t => {
+  let normalized = await cleanupUrl(undefined);
+  
+  t.is(normalized, "");
+});
+
+test("Test normalize null URL", async t => {
+  let normalized = await cleanupUrl(null);
+  
+  t.is(normalized, "");
+});
+
 test("Test normalize empty URL", async t => {
   let normalized = await cleanupUrl("");
   

@@ -2,15 +2,15 @@ import normalizeUrl from "normalize-url";
 import followRedirects from "follow-url-redirects";
 
 export async function cleanupUrl(url) {
-  if(!url || !(url || "").trim()) {
+  if(!(url || "").trim()) {
     return "";
   }
 
-  let normalized = normalizeUrl(url, {
+  const normalized = normalizeUrl(url, {
     defaultProtocol: "http:"
   });
 
-  let urls = await followRedirects(normalized, {
+  const urls = await followRedirects(normalized, {
     timeout: 5000,
     maxRedirects: 5,
   });
